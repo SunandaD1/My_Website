@@ -1,0 +1,159 @@
+ <!DOCTYPE html>
+ <html lang="en">
+ <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> My Website </title>
+    <link rel="stylesheet" href="styles.css"> <!-- to connect styles sheet into this html code -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,300;0,400;0,500;0,700;1,500&display=swap" rel="stylesheet">
+
+<!-- ^^ last three lines from google fonts! -->
+
+ </head>
+ <body>
+    <section class="header">
+        <nav>
+            <a href="index.html"><img src="images/logo.png"></a> <!-- a=anchor tags, creates hyperlinks for user navigation -->
+            <div class="nav-links"> <!-- div=division, for grouping content, used in css -->
+                <ul>
+                    <li><a href="">HOME</a></li>
+                    <li><a href="#interests">MY INTERESTS</a></li> <!-- the # to refer to IDs, in the sections below -->
+                    <li><a href="#background">MY BACKGROUND</a></li>
+                    <li><a href="#skills">MY SKILLS</a></li>
+                    <li><a href="#contact">MY CONTACT</a></li>
+
+                </ul>
+            </div>
+        </nav>
+        <div class="text-box"> <!-- shortcut: div.text-box -->
+            <h1>Hi! My name is Sunanda</h1>
+            <p>This is a website dedicated to learning a little bit more about me!</p>
+
+        </div> 
+    </section>
+
+    <!-- My Interests section -->
+    <section id="interests" class="MY_INTERESTS">
+        <h1>Get to Know Me</h1>
+        <p> </p>
+        <div class="row">
+            <div class="interests-col">
+                <h3>Arts</h3>
+                <p>
+                    I have always been interested in trying anything new that is artistic. Whether that be drawing, painting, 
+                    scrapbooking, crocheting, knitting…. You name it! I am not in any means the best at any of these hobbies 
+                    that I have picked up, but I love learning new things and watching my creations come to life! I think that 
+                    what I like about art is having some foundational rules to guide you, like using certain stitch patterns or 
+                    painting with certain colors that work well together, but also having the freedom of making it your own.  
+                    <br>
+                    <br>
+                    <img src="images/minion.jpg">
+                    
+                    <br>
+                    A recent crochet project 
+                </p>
+            </div>
+            <div class="interests-col">
+                <h3>Music</h3>
+                <p>
+                    Music is such an important part of many people’s lives, including mine. In terms of genres, I enjoy many
+                     different types of music. However, I am most into Bollywood and just generally all South Asian music. 
+                     Although my 50+ hour playlists do not do it justice, because this kind of music is just so good! Being South Asian myself, 
+                      listening to these songs started simply from the desire to be closer to and more appreciative of my culture. It has now 
+                      turned into a genuine liking for all South Asian music. 
+                      <br>
+                      <br>
+                      <img src="images/arijit.jpg">
+                      <br>
+                      Arijit Singh, Indian playback singer and music composer
+                </p>
+            </div>
+        </div>
+
+    </section>
+
+    <!-- My Background Section -->
+
+    <section id="background" class="MY_BACKGROUND">
+        <h1>The Beautiful Country of Bangladesh</h1>
+        <div class="row">
+            <div class="background-col">
+                <h3>The Village</h3>
+                <p>
+                    My parents are immigrants from the South Asian country Bangladesh. This leads me to having many family 
+                    members to visit back home whenever I go. The summer of 2023 was my last visit, and it was a very hot yet 
+                    exciting time. Being from the village in Bangladesh, the culture shock is quite large. They do not eat the 
+                    same foods or spend their time doing the same activities. A different environment, isolated from what I am 
+                    used to in the western world, is very liberating. I enjoyed things like street food, seeing the infamous tea 
+                    plants (shown as the banner of this website), the personal ponds (closest thing to backyard swimming pools 
+                    in the village), and the endless shopping for cultural clothes. I can go on about the beauties of Bangladesh,
+                    but I will stop there. The following images are only some of what I could capture of the life where my parents are from: 
+  
+                </p>
+            </div>
+            <div class="slider-wrapper"> <!-- contains images and nav for slider -->
+                <div class="slider"> <!-- all images -->
+                    <img src="images/3.jpg">
+                    <img src="images/4.jpg">
+                    <img src="images/2.jpg">
+                    <img src="images/5.jpg">
+                    <img src="images/6.jpg">
+                    <img src="images/7.jpg">
+                    <img src="images/8.jpg">
+                    <img src="images/9.jpg">
+                    <img src="images/10.jpg">
+                    <img src="images/11.jpg">
+                    <img src="images/12.jpg">
+                    <img src="images/13.jpg">
+                    <img src="images/14.jpg">
+                    <img src="images/15.jpg">
+                    <img src="images/16.jpg">
+
+                <div>
+            </div>
+
+        </div>
+
+    </section>
+
+    <!-- My Skills Section -->
+<section id="skills" class="MY_SKILLS">
+    <h1>A Glimpse of My Resume</h1>
+    <div class="row">
+        <div class="mePhoto">
+            <p><img src="images/me.jpg"></p>
+        </div>
+        <div class="skills-col">
+            <h3>Skills</h3>
+            <p>The best thing that I can say about myself is that I am a very quick learner. Not only that, 
+                but I love learning and creating new things of my own. I can adapt to different environments 
+                and am quick to appreciate what there is to gain from every situation, even if there are many downsides. 
+                <br>
+                <br>
+                On a more technical note, I am proficient in HTML and CSS. This is what was used 
+                to make this very website! Python is one of my favorite programming languages so far, 
+                but I am in the process of learning more languages so that may very well change. My <a href="https://github.com/SunandaD1" 
+                target="_blank"><b>Github</b></a> shows some 
+                of the projects completed using Python. As mentioned,
+                 I am a quick learner and am always wanting to learn new things to implement them into my own 
+                 creations, so my current goal is to continue learning and hopefully mastering more technical 
+                 skills as I continue my studies as a Software Engineering student.
+                </p>
+                    <!-- target blank means opens in new tab -->
+
+        </div>
+    </div>
+
+</section>
+
+    <!-- My Contacts button Section -->
+
+<section id="contact" class="MY_CONTACT">
+    <h1>This Does Not Have to be the End!<br> Feel Free to Reach Out</h1>
+    <a href="https://www.linkedin.com/in/sunanda-datta-289bb8295/" target="_blank" class="myInfo-button">CONTACT ME</a>
+</section>
+
+ </body>
+ </html>

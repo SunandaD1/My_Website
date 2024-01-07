@@ -1,0 +1,280 @@
+*{
+    margin: 0;
+    padding:0;
+    font-family: 'Montserrat', sans-serif; /* from google fonts */
+}
+
+body {
+    background-color: #a5c2a4d0; /* Set your desired background color using hex, RGB, or color names */
+  }
+  
+
+.header{
+    min-height: 100vh; /* min height covers at least entire viewport height */
+    width: 100%; 
+    background-image: linear-gradient(rgba(4, 41, 43, 0.7),rgba(4, 41, 43, 0.7)),url(images/tea_plant_background.jpg);
+    /* background will have a green cover with 70% opacity, behind the words */
+    background-position: center;
+    background-size: cover;
+    position: relative;
+
+}
+nav{
+    display:flex;
+    padding: 2% 6%; 
+    justify-content: space-between;
+    align-items: center;
+}
+
+nav img{
+    width: 100px; /* resizes logo */
+}
+
+.nav-links{
+    flex: 1;
+    text-align: right;
+}
+
+.nav-links ul li{
+    list-style: none; /* removes bulleted list */
+    display: inline-block;
+    padding: 8px 12px;
+    position: relative;
+}
+
+.nav-links ul li a{ /* navigation links info */
+
+    color: white;
+    text-decoration: none;
+    font-size: 13px;
+}
+
+.nav-links ul li ::after{ /* for hover effect on links */
+    content: '';
+    width: 0%; /* hides underline */
+    height: 2px;
+    background: #7f4b08;
+    display: block;
+    margin: auto;
+    transition: 0.5s; /* time taken for hover color to show */
+}
+
+.nav-links ul li :hover::after{ /* must have space after li or wont work */
+    width: 100%;
+}
+
+.text-box{
+    width: 90%;
+    color: white;
+    position: absolute;
+    top: 50%;
+    left:50%;
+    transform: translate(-50%,-50%); /* to center */
+    text-align: center;
+}
+
+.text-box h1{
+    font-size: 62px;
+}
+
+.text-box p{
+    margin: 10px 0 40px; /* 10 top, 0 left and right, 40 bottom*/
+    font-size: 14px;
+    color: white;
+}
+
+@media(max-width:700px){ /* to navigate nice on smaller devices*/
+    .text-box h1{
+        font-size: 20px;
+    }
+    .nav-links ul li{
+        display: block; /* block changes default behaviour into block-level
+        and will usually take up the full width available*/
+
+    }
+    .nav-links{ /* creates menu bar on side on phones */
+        position: absolute;
+        background: #7f4b08;
+        height: 100vh;
+        width: 200px;
+        top: 0;
+        right: 0;
+        text-align: left;
+        z-index: 2;
+    }
+}
+
+/* MY INTERESTS section */
+
+.MY_INTERESTS{
+    width: 80%;
+    margin: auto;
+    text-align: center;
+    padding-top: 100px;
+} 
+.h1{
+    font-size: 36px;
+    font-weight: 600;
+}
+
+.p{
+    color: black;
+    font-size: 14px;
+    font-weight: 300;
+    line-height: 22px;
+    padding: 10px;
+}
+
+.row{ /* makes into side by side sections instead of all below one another */
+    margin-top: 5%;
+    display: flex;
+    justify-content: space-between;
+}
+
+.interests-col{
+    flex-basis: 49%; /* amount of horizontal space taken  */
+    background: #f8efe5;
+    border-radius: 10px; /* radius of corners, more rounded */
+    margin-bottom: 5%; /* creates space btw this and below stuff */
+    padding: 40px 12px; /* sets inner space of element, first for top/bottom, second for left/right */
+    box-sizing: border-box; /* makes sure specified dimensions above stay consisten/dont expand beyond */
+}
+
+.interests-col:hover{
+    box-shadow: 0 0 20px 0px rgba(112, 111, 111, 0.5);
+}
+
+.interests-col img {
+    border-radius: 10px; /* Makes the image rounded edges */
+    max-width: 200px; /* Sets the maximum width of the image to 100 pixels */
+    height: auto; /* Automatically adjusts the height while maintaining the aspect ratio */
+  }
+
+h3{
+    text-align: center;
+    font-weight: 600;
+    margin: 10px 0;
+}
+
+@media(max-width:700px){ /* for looking good on smaller devices  */
+    .row{
+        flex-direction: column;
+    }
+}
+
+/* MY BACKGROUND section */
+
+.MY_BACKGROUND{
+    width: 80%;
+    margin: auto;
+    text-align: center;
+    padding-top: 50px;
+}
+
+.background-col{
+    flex-basis: 35%; /* amount of horizontal space taken  */
+    background: #f8efe5;
+    margin-bottom: 30px;
+    position: relative;
+    border-radius: 10px; /* radius of corners, more rounded */
+    padding: 40px 12px; /* sets inner space of element, first for top/bottom, second for left/right */
+    box-sizing: border-box; /* makes sure specified dimensions above stay consisten/dont expand beyond */
+}
+
+.background-col:hover{
+    box-shadow: 0 0 20px 0px rgba(112, 111, 111, 0.5);
+}
+
+.slider-wrapper{
+    position: relative;
+    max-width: 40rem;
+    margin: 0 auto; 
+}
+
+.slider{
+    display: flex; 
+    aspect-ratio: 1.3;
+    overflow-x: scroll; /* no overflow, default scrollbar */
+    scroll-snap-type: x mandatory; /* x tells to snap along x, not visible until scroll snap align */
+    scroll-behavior: smooth;
+    box-shadow: 0 1.5rem 3rem -0.75rem hsla(0,0%,0%,0.25); /* x offset, y offset, blur, spread, colour=hue,sat, lightness,opacity */
+    border-radius: 1.5rem; /* rounds edges, rem=root-em, relative to the size of the root element */
+}
+
+.slider img{
+    width: 100%;
+    height: auto;
+    scroll-snap-align: start; /* scrolls to next pic, not just where stopped scrolling */
+    object-fit:cover; /* no distortion of images, but sometimes crops it */
+}
+
+@media(max-width:700px){ /* for looking good on smaller devices  */
+    .background-col {
+        padding: 10px;
+        flex-direction: column;
+    }
+}
+
+/* My Skills section */
+
+.MY_SKILLS{
+    width: 80%;
+    margin: auto;
+    text-align: center;
+    padding-top: 100px;
+}
+
+.mePhoto img{
+    border-radius: 10px; /* Makes the image rounded edges */
+    max-width: 540px; /* Sets the maximum width of the image to 100 pixels */
+    height: auto; /* Automatically adjusts the height while maintaining the aspect ratio */
+    box-shadow: 0 0 20px 0px rgba(112, 111, 111, 0.5);;
+}
+
+.skills-col {
+    flex-basis: 50%; /* amount of horizontal space taken  */
+    background: #f8efe5;
+    margin-bottom: 30px;
+    position: relative;
+    border-radius: 10px; /* radius of corners, more rounded */
+    padding: 40px 12px; /* sets inner space of element, first for top/bottom, second for left/right */
+    box-sizing: border-box; /* makes sure specified dimensions above stay consisten/dont expand beyond */
+}
+
+.skills-col:hover{
+    box-shadow: 0 0 20px 0px rgba(112, 111, 111, 0.5);
+}
+
+/* Contact Section */
+
+.MY_CONTACT{
+    margin: 100px auto;
+    width: 80%;
+    background-image: linear-gradient(rgba(0,0,0,0.7),rgba(0,0,0,0.7)),url(images/contactMePic.jpg); /* makes darker on top of pic, so words can show */
+    background-position: center;
+    background-size: cover;
+    border-radius: 10px;
+    text-align: center;
+    padding: 100px 0;
+}
+
+.MY_CONTACT h1{
+    color: white;
+    margin-bottom: 40px;
+    padding: 0%;
+}
+
+.myInfo-button{
+    padding: 10px 20px;
+    font-size: 16px;
+    background-color: #2e632d;
+    color: white;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+    text-decoration: none; /* removes underline on button, bc default on link is underline */
+}
+
+.myInfo-button:hover {
+    background-color: #4b9f4a;
+  }
